@@ -1,0 +1,30 @@
+name: hexo-deploy-gh-pages
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          repository: qianfanguojin/hexo-blog-source
+      - name: Set Node Version
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Build    
+        run: npm install && npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: master
+          folder: public
+          repository-name: qianfanguojin/qianfanguojin.github.io
+          token: ${{secrets.ACCESS_TOKEN}}
+          git-config-name: xie0619
+          git-config-email: 1657098617@qq.com
+
+      
