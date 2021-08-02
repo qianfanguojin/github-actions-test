@@ -10,7 +10,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
         with:
-          repository: qianfanguojin/hexo-blog-source
+          repository: qianfanguojin/hexo-blog-source@new
       - name: Set Node Version
         uses: actions/setup-node@v2
         with:
