@@ -1,0 +1,16 @@
+name: "day1-trigger"
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+jobs:
+  test:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo "day1-trigger"
+
+    
+

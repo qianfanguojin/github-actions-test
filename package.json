@@ -4,7 +4,7 @@
   "description": "测试github\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D和学习\u001b[C\u001b[Dgithub action",
   "main": "index.js",
   "scripts": {
-    "test": "git add . && git cmm 'test action' && git push"
+    "test": "git add . && git cmm \"test action\" && git push"
   },
   "repository": {
     "type": "git",
