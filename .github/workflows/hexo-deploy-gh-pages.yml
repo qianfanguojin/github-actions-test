@@ -2,7 +2,7 @@ name: hexo-deploy-gh-pages
 on: 
   push:
     branches:
-      - main
+      - none
 jobs:
   deploy-gh-page:
     runs-on: ubuntu-latest
