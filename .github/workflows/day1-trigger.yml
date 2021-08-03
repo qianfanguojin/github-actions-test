@@ -2,7 +2,7 @@ name: "day1-trigger"
 on:
   push:
     branches:
-    - main
+    - none
   pull_request:
     branches:
     - main
