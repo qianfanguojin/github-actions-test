@@ -32,8 +32,8 @@ jobs:
       env:
         CC: ${{ matrix.cc }}
 
-    - name: Checkout
-      uses: actions/checkout@v1
+    # - name: Checkout
+    #   uses: actions/checkout@v1
 
-    - name: Build
-      run: ./configure && make test
+    # - name: Build
+    #   run: ./configure && make test
