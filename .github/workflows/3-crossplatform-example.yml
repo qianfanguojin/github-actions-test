@@ -1,11 +1,11 @@
 # test
 name: Crossplatform-Example
 
-on: [push]
-# on: 
-#   push:
-#     branches:
-#       - none
+# on: [push]
+on: 
+  push:
+    branches:
+      - none
 
 #分为三个任务，每个任务都有单独的虚拟系统环境
 jobs:
@@ -26,3 +26,34 @@ jobs:
     steps:
     - name: Print
       run: uname -a
+
+#原版
+# test
+# name: CI
+
+# on: [push]
+
+# jobs:
+#   linux:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@v1
+#     - name: Build
+#       run: make
+
+#   windows:
+#     runs-on: windows-latest
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@v1
+#     - name: Build
+#       run: make
+
+#   macos:
+#     runs-on: macos-latest
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@v1
+#     - name: Build
+#       run: make

@@ -1,0 +1,44 @@
+# test
+name: Crossplatform-Matrix-Example
+
+on: [push]
+# on: 
+#   push:
+#     branches:
+#       - none
+
+jobs:
+  linux/macOS:
+    strategy:    
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{matrix.os}} #ubuntu系统环境
+    steps:
+    - name: Print
+      run: uname -a
+
+  windows:
+    runs-on: windows-latest
+    steps:
+    - name: Print
+      run: systeminfo
+
+#原版
+# test
+# name: CI
+
+# on: [push]
+
+# jobs:
+#   build:
+#     strategy:
+#       matrix:
+#         os: [ubuntu-latest, windows-latest, macos-latest]
+
+#     runs-on: ${{ matrix.os }}
+
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@v1
+#     - name: Build
+#       run: make
