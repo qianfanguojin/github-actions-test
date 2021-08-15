@@ -10,25 +10,19 @@ on: [push]
 #分为三个任务，每个任务都有单独的虚拟系统环境
 jobs:
   linux:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #ubuntu系统环境
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: Build
-      run: make
+    - name: Print
+      run: uname -a
 
   windows:
     runs-on: windows-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: Build
-      run: make
+    - name: Print
+      run: systeminfo
 
   macos:
     runs-on: macos-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: Build
-      run: make
+    - name: Print
+      run: uname -a
