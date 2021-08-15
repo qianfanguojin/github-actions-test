@@ -8,7 +8,7 @@ on: [push]
 #       - none
 
 jobs:
-  linux&macOS:
+  linuxOrmacOS:
     strategy:    
       matrix:
         os: [ubuntu-latest, macos-latest]
