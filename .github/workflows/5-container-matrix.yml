@@ -1,0 +1,27 @@
+name: Container Matrix
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        container: 
+        - 'debian:7'
+        - 'debian:testing'
+        - 'ubuntu:14.04'
+        - 'ubuntu:devel'
+        - 'centos:6'
+        - 'centos:latest'
+    container: ${{matrix.container}}
+
+    steps:
+    - run: | 
+        cat /etc/*release
+      
+    # - uses: actions/checkout@v1
+    # - run: |
+    #     npm ci
+    #     npm run build
+    #     npm test
