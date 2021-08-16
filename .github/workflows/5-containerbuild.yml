@@ -1,0 +1,19 @@
+name: Containerbuild
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: 'node:current'
+
+    steps:
+      - run: | 
+        cat /etc/*release
+        node -v
+        npm -v
+    # - uses: actions/checkout@v1
+    # - run: |
+    #     npm ci
+    #     npm run build
+    #     npm test
