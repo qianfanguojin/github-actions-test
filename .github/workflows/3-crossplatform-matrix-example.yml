@@ -1,11 +1,11 @@
 # test
 name: Crossplatform-Matrix-Example
 
-on: [push]
-# on: 
-#   push:
-#     branches:
-#       - none
+# on: [push]
+on: 
+  push:
+    branches:
+      - none
 
 jobs:
   linuxOrmacOS:
