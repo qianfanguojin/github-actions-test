@@ -8,10 +8,11 @@ jobs:
     container: 'node:current'
 
     steps:
-      - run: | 
+    - run: | 
         cat /etc/*release
         node -v
         npm -v
+      
     # - uses: actions/checkout@v1
     # - run: |
     #     npm ci
