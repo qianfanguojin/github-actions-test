@@ -3,7 +3,7 @@ name: Container Matrix
 on: [push]
 
 jobs:
-  build:
+  linux:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -19,9 +19,3 @@ jobs:
     steps:
     - run: | 
         cat /etc/*release
-      
-    # - uses: actions/checkout@v1
-    # - run: |
-    #     npm ci
-    #     npm run build
-    #     npm test
