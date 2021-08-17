@@ -7,9 +7,9 @@ jobs:
   Build:
     strategy:    
       matrix:
-        os: [windows-latest,macos-latest,ubuntu-latest, ]
+        os: [ubuntu-latest,windows-latest,macos-latest]
       fail-fast: false
     runs-on: ${{matrix.os}} 
     steps:
     - name: Build
-      run: top
+      run: free
