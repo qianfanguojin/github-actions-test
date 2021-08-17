@@ -1,7 +1,10 @@
 name: Container Matrix
 
-on: [push]
-
+# on: [push]
+on: 
+  push:
+    branches:
+      - none
 jobs:
   linux:
     runs-on: ubuntu-latest
