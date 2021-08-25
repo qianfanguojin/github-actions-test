@@ -1,6 +1,10 @@
 name: Inspect Contexts
 
-on: [push]
+# on: [push]
+on: 
+  push:
+    branches:
+      - none
 
 jobs:
   build:
