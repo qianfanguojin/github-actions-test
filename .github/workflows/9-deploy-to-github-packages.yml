@@ -1,0 +1,22 @@
+name: Deploy To Github Packages
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: package docker
+      run: |
+        VERSION=$(date +%s)
+        docker login docker.pkg.github.com --username qianfanguojin --password ${{ secrets.GITHUB_TOKEN }}
+      env:
+        CI: true
+        # docker build . --file Dockerfile --tag docker.pkg.github.com/ethomson/myrepo/app:${VERSION}
+        # docker push docker.pkg.github.com/ethomson/myrepo/app:${VERSION}

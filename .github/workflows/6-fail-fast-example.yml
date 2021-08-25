@@ -1,8 +1,11 @@
 # test
 name: FailFast-Example
 
-on: [push]
-
+# on: [push]
+on: 
+  push:
+    branches:
+      - none
 jobs:
   Build:
     strategy:    
