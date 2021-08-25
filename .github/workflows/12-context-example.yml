@@ -1,0 +1,12 @@
+name: Context Example
+
+on: [push]
+
+jobs:
+  build:
+    name: Inspect context
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect context
+        run: |
+          echo This workflow on ${{ github.repository }} was started by ${{ github.actor }}
