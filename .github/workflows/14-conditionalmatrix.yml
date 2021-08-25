@@ -29,9 +29,9 @@ jobs:
       shell: bash
     - name: Build
       # run: cmake --build .
-      run: cmake -v
+      run: cmake --version
       working-directory: ${{ runner.workspace }}/build      
     - name: Test
       # run: ctest -V
-      run: ctest -v
+      run: ctest --version
       working-directory: ${{ runner.workspace }}/build
