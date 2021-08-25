@@ -25,7 +25,7 @@ jobs:
       run: |
         mkdir "${{ runner.workspace }}/build"
         cd "${{ runner.workspace }}/build"
-        cmake $GITHUB_WORKSPACE -GNinja
+      # cmake $GITHUB_WORKSPACE -GNinja
       shell: bash
     - name: Build
       run: cmake --build .
