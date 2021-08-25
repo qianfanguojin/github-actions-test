@@ -1,11 +1,13 @@
 name: Publish Documentation
 
-on:
-  push:
-    branches:
-    - main
-    paths:
-    - 'docs/**'
+
+on: [push]
+# on:
+#   push:
+#     branches:
+#     - main
+#     paths:
+#     - 'docs/**'
 
 jobs:
   build:
