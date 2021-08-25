@@ -1,12 +1,16 @@
 name: Conditional
 
-on:
+on: 
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - none
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
 
 jobs:
   build:
