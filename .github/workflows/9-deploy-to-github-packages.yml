@@ -1,10 +1,7 @@
 name: Deploy To Github Packages
 
-# on: [push]
-on: 
-  push:
-    branches:
-      - none
+on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
