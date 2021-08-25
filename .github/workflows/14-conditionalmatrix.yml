@@ -28,8 +28,10 @@ jobs:
       # cmake $GITHUB_WORKSPACE -GNinja
       shell: bash
     - name: Build
-      run: cmake --build .
+      # run: cmake --build .
+      run: cmake -v
       working-directory: ${{ runner.workspace }}/build      
     - name: Test
-      run: ctest -V
+      # run: ctest -V
+      run: ctest -v
       working-directory: ${{ runner.workspace }}/build
