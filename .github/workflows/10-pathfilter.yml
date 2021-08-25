@@ -1,0 +1,18 @@
+name: Publish Documentation
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - 'docs/**'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "发布文档测试"
+      # - run: scripts/publish_docs.sh
+      #   env:
+      #     PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
