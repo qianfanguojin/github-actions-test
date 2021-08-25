@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: Show Popularity
         run: |
+          echo ${{ github.event_path }}
           STARS=$(jq --raw-output .repository.stargazers "${{ github.event_path }}")
           FORKS=$(jq --raw-output .repository.forks "${{ github.event_path }}")
           echo "${{ github.repository }} has $STARS stars and $FORKS forks"
