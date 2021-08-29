@@ -32,5 +32,5 @@ jobs:
     # 然后指示 Github Actions 使在接下来的 `run` step 中这个环境变量可用。
     - run: |
         export FOO=bar
-        echo "::set-env name=FOO::$FOO"
-    - run: echo $FOO
+        echo "name=FOO" >> $GITHUB_EUV
+    - run: echo ${{ env.name }}
