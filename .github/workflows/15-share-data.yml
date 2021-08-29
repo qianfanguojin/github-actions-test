@@ -11,7 +11,7 @@ on: [push]
 #     - cron: 0 5 * * *
 
 jobs:
-  build2:
+  build1:
     runs-on: [ubuntu-latest]
     steps:
     # This will NOT work.  These two `run` steps are written
