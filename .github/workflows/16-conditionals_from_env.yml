@@ -1,11 +1,10 @@
 name: Conditional From ENV
 
-
-# on: [push]
-on: 
-  push:
-    branches:
-      - none
+on: [push]
+# on: 
+#   push:
+#     branches:
+#       - none
 # on:
 #   schedule:
 #     - cron: 0 5 * * *
