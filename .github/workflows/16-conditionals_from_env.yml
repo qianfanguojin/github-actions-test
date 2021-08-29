@@ -16,5 +16,5 @@ jobs:
     - run: echo "DAY_OF_WEEK = $( date +%a )" >> $GITHUB_ENV
     - run: echo "Today is $DAY_OF_WEEK"
     - run: echo "Somebody has a case of the mondays!"
-      if: env.DAY_OF_WEEK == 'Sun'
+      if: ${{ env.DAY_OF_WEEK == 'Sun' }} 
     - run: echo "This runs every day..."
