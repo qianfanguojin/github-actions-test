@@ -1,0 +1,20 @@
+name: CI
+
+
+# on: [push]
+on: 
+  push:
+    branches:
+      - none
+# on:
+#   schedule:
+#     - cron: 0 5 * * *
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+    - run: echo "::set-env name=DAY_OF_WEEK::$( date +%a )"
+    - run: echo "Somebody has a case of the mondays!"
+      if: env.DAY_OF_WEEK == 'Mon'
+    - run: echo "This runs every day..."

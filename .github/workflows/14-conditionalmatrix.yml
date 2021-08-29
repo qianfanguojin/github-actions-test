@@ -1,6 +1,10 @@
 name: Build with CMake and Ninja
 
-on: [push]
+on: 
+  push:
+    branches:
+      - none
+# on: [push]
 
 jobs:
   build:

@@ -1,0 +1,36 @@
+name: Share Data
+
+
+on: [push]
+# on: 
+#   push:
+#     branches:
+#       - none
+# on:
+#   schedule:
+#     - cron: 0 5 * * *
+
+jobs:
+  build2:
+    runs-on: [ubuntu-latest]
+    steps:
+    # This will NOT work.  These two `run` steps are written
+    # as different scripts and run by different shells, so
+    # the `FOO` variable will NOT persist between them.
+    # 这个方式行不通。这两个 `run` 会被写入
+    # 不同的脚本中，而且运行在不同的shell环境下，所以
+    # `FOO` 变量不会在它们之间持续存在。
+    - run: export FOO=bar
+    - run: echo $FOO
+  build2:
+    runs-on: [ubuntu-latest]
+    steps:
+    # This will set the FOO environment variable within the
+    # first `run` script, then instruct GitHub Actions to make
+    # it available within subsequent `run` steps as well.
+    # 这将在第一个 `run` 脚本中设置 FOO 环境变量值，
+    # 然后指示 Github Actions 使在接下来的 `run` step 中这个环境变量可用。
+    - run: |
+        export FOO=bar
+        echo "::set-env name=FOO::$FOO"
+    - run: echo $FOO
