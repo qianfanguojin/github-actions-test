@@ -1,0 +1,28 @@
+name: Needs
+
+on: [push]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: actions/checkout@v1
+      # - run: ./setup_test_infrastructure.sh
+      - run: echo "Setup"
+  build:
+    needs: setup
+    runs-on: 'ubuntu-latest'
+    steps:
+      # - uses: actions/checkout@v1
+      # - run: |
+      #     ./build.sh
+      #     ./test.sh
+      #   shell: bash
+      - run: echo "Build"
+  shutdown:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: actions/checkout@v1
+      # - run: ./shutdown_test_infrastructure.sh 
+      - run: echo "ShutDown"
