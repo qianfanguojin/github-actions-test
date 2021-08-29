@@ -1,7 +1,10 @@
 name: Needs With Matrix
 
-on: [push]
-
+# on: [push]
+on: 
+  push:
+    branches:
+      - none
 jobs:
   setup:
     runs-on: ubuntu-latest
