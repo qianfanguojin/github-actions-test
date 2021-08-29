@@ -31,5 +31,5 @@ jobs:
     # 这将在第一个 `run` 脚本中设置 FOO 环境变量值，
     # 然后指示 Github Actions 使在接下来的 `run` step 中这个环境变量可用。
     - run: |
-        echo "name=FOO" >> $GITHUB_EUV
+        echo "name=FOO" >> $GITHUB_ENV
     - run: echo ${{ env.name }}
