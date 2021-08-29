@@ -1,8 +1,10 @@
 name: Share Data
 
-
-on: [push]
-
+# on: [push]
+on: 
+  push:
+    branches:
+      - none
 
 jobs:
   build1:
@@ -26,4 +28,6 @@ jobs:
     # 然后指示 Github Actions 使在接下来的 `run` step 中这个环境变量可用。
     - run: |
         echo "FOO=bar" >> $GITHUB_ENV
-    - run: echo ${{ env.FOO }}
+    - run: | 
+        echo ${{ env.FOO }}
+        echo $FOO
