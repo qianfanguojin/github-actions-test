@@ -1,0 +1,33 @@
+name: Download-Test
+
+on: [push]
+# on: 
+#   push:
+#     branches:
+#       - none
+jobs:    
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download
+      run: |
+        wget "https://academicgraphv2.blob.core.windows.net/oag/mag/paper/mag_papers_0.zip"
+    # - name: Display Configuration
+    #   run: |
+    #     echo "C Compiler:"
+    #     ${CC} --version
+    #     echo ""
+    #     echo "Curl configuration:"
+    #     curl-config --ssl-backends --version
+    #     echo ""
+    #     echo "Kerberos configuration:"
+    #     krb5-config --all
+    #   env:
+    #     CC: ${{ matrix.cc }}
+
+    # - name: Checkout
+    #   uses: actions/checkout@v1
+
+    # - name: Build
+    #   run: ./configure && make test

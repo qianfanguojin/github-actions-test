@@ -22,4 +22,4 @@ jobs:
       with:
         name: nuget
         path: ${{ github.workspace }}/package
-      name: 'Upload Package'
+      name: 'Upload Package' 
